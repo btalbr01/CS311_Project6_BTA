@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <head>
+        <title>Balance Sheet Calculator</title>
+        <link rel="stylesheet" href="css\index.css" />
+        <script src="js\properties.js"></script>
+    </head>
+
+    <body>
+        <h1>Bellarmine Financials - Balance Sheet Calculator</h1>
+            <div id = "AxL">
+        <tr>
+             <th>Assets</th>
+             <th>Liabilities</th>
+        </tr>
+            </div>
+            
+            <div class = "financials">
+                
+            <div class = "assets">
+                <h5>Current Assets</h5>
+                <div id = "cAssets" style = "display: none;" >
+            <p><label for = "cash"><strong>Cash:</strong></label> <input type="cash" id="cash" name="cash"></p>
+            <p><label for = "inventory"><strong>Inventory:</strong></label> <input type="inventory" id="inventory" name="inventory"></p>
+            <p><label for = "supplies"><strong>Supplies:</strong></label> <input type="supplies" id="supplies" name="supplies"></p>
+            <p><label for = "tempInv"><strong>Temporary Investments:</strong></label> <input type="tempInv" id="tempInv" name="tempInv"></p>
+            <p id="TCA"><strong>Total Current Assets: </strong></p>
+                </div>
+            <p id="text"></p><br />
+            <div class="button" id="assetButton">
+            <p><button onclick="showAssets()">Add Current Assets</button></p>
+            </div>
+        </div>
+
+              
+            <div id = "IPE">
+                <h5>Investment Property and Equipment</h5>
+                <div id = "cIPE" style = "display: none;" >
+            <p><label for = "land"><strong>Land:</strong></label> <input type="land" id="land" name="land"></p>
+            <p><label for = "BnI"><strong>Buildings and Improvements:</strong></label> <input type="BnI" id="BnI" name="BnI"></p>
+            <p><label for = "equipment"><strong>Equipment:</strong></label> <input type="equipment" id="equipment" name="equipment"></p>
+            <p><label for = "tempInvest"><strong>Temporary Investments:</strong></label> <input type="tempInvest" id="tempInvest" name="tempInvest"></p>
+            <p id="TIPE"><strong>Total Investment Property and Equipment: </strong></p>
+              </div>
+              <div class="button" id="ipeButton">
+                <p><button onclick="showIPE()">Add Investment Property & Equipment</button></p>
+                </div>
+            </div>
+
+              
+            <div id = "intangible">
+                <h5>Intangible Assets</h5>
+                <div id = "cIntangible" style = "display: none;" >
+            <p><label for = "tradeNames"><strong>Trade Names:</strong></label> <input type="tradeNames" id="tradeNames" name="tradeNames"></p>
+            <p><label for = "goodwill"><strong>Goodwill:</strong></label> <input type="goodwill" id="goodwill" name="goodwill"></p>
+            <p id = "intang"><strong>Total Intangible Assets: </strong></p>
+              </div>
+              <div class="button" id="intButton">
+                <p><button onclick="showIntangible()">Add Intangibles</button></p>
+                </div>
+            </div>
+
+              
+              <div id = "curLiablities">
+                <h5>Current Liablities</h5>
+                <div id = "cLiabs" style = "display: none;" >
+            <p><label for = "acctPay"><strong>Accounts Payable:</strong></label> <input type="acctPay" id="acctPay" name="acctPay"></p>
+            <p><label for = "notePay"><strong>Notes Payable:</strong></label> <input type="notePay" id="notePay" name="notePay"></p>
+            <p><label for = "intPay"><strong>Interest Payable:</strong></label> <input type="intPay" id="intPay" name="intPay"></p>
+            <p><label for = "wagePay"><strong>Wages Payable:</strong></label> <input type="wagePay" id="wagePay" name="wagePay"></p>
+            <p><label for = "accExp"><strong>Accrued Expenses:</strong></label> <input type="accExp" id="accExp" name="accExp"></p>
+            <p id = "cLiabilities"><strong>Total Current Liabilities: </strong></p>
+        </div>
+        <div class="button" id="clButton">
+            <p><button onclick="showSTL()">Add Current Liabilities</button></p>
+            </div>
+              </div>
+
+              <div id = "LTL">
+                <h5>Long-Term Liabilities</h5>
+                <div id = "LTLiabs" style = "display: none;" >
+            <p><label for = "LTnotePay"><strong>Notes Payable:</strong></label> <input type="LTnotePay" id="LTnotePay" name="LTnotePay"></p>
+            <p><label for = "bondsPay"><strong>Bonds Payable:</strong></label> <input type="bondsPay" id="bondsPay" name="bondsPay"></p>
+            <p id = "longTerm"><strong>Long-Term Liabilities: </strong></p>
+            </div>
+            <div class="button" id="ltlButton">
+                <p><button onclick="showLTL()">Add Long-Term Liabilities</button></p>
+                </div>
+              </div>
+                
+              <div id = "position">
+                <h2>Total Position</h2>
+                <p><button onclick="totals()">Calculate Position</button></p>
+                <h3 id = "tAssets">Total Assets: </h3>
+                <h3 id = "tLiability">Total Liabilities: </h3>
+                <h3 id = "pos">Position: </h3>
+              </div>
+                  </div>
+         <footer>© Bellarmine University 2022</footer>
+    </body>
